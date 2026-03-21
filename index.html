@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,6 +33,23 @@
           <img id ="profile-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
         </div>
       </header>
+      <main>
+        <div class="post-generator">
+          <form>
+            <div class ="post-header">
+              <img src="./assets/media/profile-photo.jpg" alt="Profile photo">
+              <span class="username"></span>
+            </div>
+            <textarea id="post-content" name="post" placeholder="What are you thinking?"></textarea>
+            <div class = "post-actions">
+              <label for="upload-photo" class="upload-icon">
+                <i class="fa-solid fa-image"></i>
+              </label>
+              <input type="file" id="upload" accept="image/*">   
+              <button type="submit">Post</button>
+            </div>
+          </form>
+        </div>
     </div>
   </body>
 </html>
