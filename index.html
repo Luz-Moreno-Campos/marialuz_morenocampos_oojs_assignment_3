@@ -30,14 +30,33 @@
           </nav>
         </div>
         <div class="profile-info">
-          <img id ="profile-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
+          <img class="profile-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
+          <div id="profile-modal" class="profile-modal hidden">
+            <img class="profile-photo" id="modal-photo" src="./assets/media/profile-photo.jpg">
+            <div class="modal-row">
+              <span class="label">Name:</span>
+              <span class="value" id="modal-name"></span>
+            </div>
+            <div class="modal-row">
+              <span class="label">Username:</span>
+              <span class="value" id="modal-username"></span>
+            </div>
+            <div class="modal-row">
+              <span class="label">Email: </span>
+              <span class="value" id="modal-email"></span>
+            </div>
+            <div class="modal-row">
+              <span class="label">User ID:</span>
+              <span class="value" id="modal-id"></span>
+            </div>
+          </div>
         </div>
       </header>
       <main>
         <div class="post-generator">
           <form>
             <div class ="post-header">
-              <img id ="profile-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
+              <img class ="profile-photo" id ="header-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
               <span class="username"></span>
             </div>
             <textarea id="post-content" name="post" placeholder="What are you thinking?"></textarea>
