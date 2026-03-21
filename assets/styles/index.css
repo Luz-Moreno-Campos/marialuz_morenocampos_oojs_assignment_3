@@ -63,22 +63,21 @@ a:hover {
 #profile-modal {
   position: absolute;
   top: 70px;  
-  background: rgb(247, 246, 246);
+  background: rgb(235, 239, 246);
+  border: 3px solid rgb(231, 234, 240);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  z-index: 10;
-}
-
-#profile-modal p {
-  white-space: nowrap;
 }
 
 #modal-photo {
   margin-bottom: 10px;
 }
 
-
+.label {
+  font-weight: bold;
+  color: rgb(13, 65, 150);
+}
 
 
 main {
