@@ -54,3 +54,42 @@ a:hover {
   box-shadow: 0 0 10px rgb(103, 136, 197);
   cursor: pointer;
 }
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.post-generator{
+  width:40%;
+  background-color: #bfc8d9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.post-header {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.username {
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+textarea {
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+  background-color:rgb(236, 232, 232) ;
+  padding: 10px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  gap: 450px;
+}
