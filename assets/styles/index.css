@@ -46,7 +46,7 @@ a:hover {
 
 }
 
-#profile-photo {
+.profile-photo {
   height: 50px;
   margin-top: 15px ;
   border-radius: 50%;
