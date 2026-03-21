@@ -55,6 +55,32 @@ a:hover {
   cursor: pointer;
 }
 
+.profile-info {
+  position: relative;
+  
+}
+
+#profile-modal {
+  position: absolute;
+  top: 70px;  
+  background: rgb(247, 246, 246);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+#profile-modal p {
+  white-space: nowrap;
+}
+
+#modal-photo {
+  margin-bottom: 10px;
+}
+
+
+
+
 main {
   display: flex;
   justify-content: center;
@@ -83,7 +109,7 @@ textarea {
   height: 200px;
   width: 100%;
   border-radius: 10px;
-  background-color:rgb(236, 232, 232) ;
+  background-color:rgb(247, 246, 246);
   padding: 10px;
 }
 
