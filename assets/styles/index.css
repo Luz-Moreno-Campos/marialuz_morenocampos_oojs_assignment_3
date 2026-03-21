@@ -45,3 +45,12 @@ a:hover {
   color: rgb(13, 65, 150);
 
 }
+
+#profile-photo {
+  height: 50px;
+  margin-top: 15px ;
+  border-radius: 50%;
+  border: 3px solid rgb(103, 136, 197);
+  box-shadow: 0 0 10px rgb(103, 136, 197);
+  cursor: pointer;
+}
