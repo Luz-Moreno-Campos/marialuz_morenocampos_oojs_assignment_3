@@ -60,6 +60,7 @@ cursor: pointer;
 
 .profile-info {
   position: relative; 
+
 }
 
 #profile-modal {
@@ -108,7 +109,7 @@ cursor: pointer;
 }
 
 .hidden {
-  
+  display: none; 
 }
 
 main {
