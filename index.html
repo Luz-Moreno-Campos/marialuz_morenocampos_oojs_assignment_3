@@ -30,7 +30,7 @@
           </nav>
         </div>
         <div class="profile-info">
-          <img class="profile-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
+          <img class="profile-photo" id = "header-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
           <div id="profile-modal" class="profile-modal hidden">
             <img class="profile-photo" id="modal-photo" src="./assets/media/profile-photo.jpg">
             <div class ="section-divider">
@@ -53,6 +53,13 @@
               <span class="value" id="modal-id"></span>
             </div>
             <div class ="section-divider">
+              <p>Account Features</p>
+            </div>
+            <div class="modal-row">
+              <span class="label">Can Monetize:</span>
+              <span class="value" id="modal-monetize"></span>
+            </div>
+            <div class ="section-divider">
               <p>My Pages</p>
             </div>
             <div class="modal-row">
@@ -62,13 +69,6 @@
             <div class="modal-row">
               <span class="value" id="modal-groups"></span>
             </div>
-            <div class ="section-divider">
-              <p>Account Features</p>
-            </div>
-            <div class="modal-row">
-              <span class="label">Can Monetize:</span>
-              <span class="value" id="modal-monetize"></span>
-            </div>
           </div>
         </div>
       </header>
@@ -76,7 +76,7 @@
         <div class="post-generator">
           <form>
             <div class ="post-header">
-              <img class ="profile-photo" id ="header-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
+              <img class ="profile-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
               <span class="username"></span>
             </div>
             <textarea id="post-content" name="post" placeholder="What are you thinking?"></textarea>
