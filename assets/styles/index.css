@@ -52,18 +52,22 @@ a:hover {
   border-radius: 50%;
   border: 3px solid rgb(103, 136, 197);
   box-shadow: 0 0 10px rgb(103, 136, 197);
-  cursor: pointer;
 }
 
-.profile-info {
-  position: relative;
-  
+#header-photo {
+cursor: pointer;
+position: relative;
+}
+
+.dialog {
+  position: absolute;
+  margin-top: 30px;
+  right: 50px;
 }
 
 #profile-modal {
-  position: absolute;
-  top: 90px;  
-  right: -120px;
+  max-width: 320px;
+  width:100%;
   background: rgb(235, 239, 246);
   border: 3px solid rgb(231, 234, 240);
   padding: 15px;
@@ -71,13 +75,26 @@ a:hover {
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+.section-divider {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: rgb(11, 54, 124);
+  font-weight: bold;
+  font-size: 1.7rem;
+  border-bottom: 2px solid #a19e9e;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
 #modal-photo {
   margin-bottom: 10px;
 }
 
 .label {
-  font-weight: bold;
+  font-weight: 500;
   color: rgb(11, 54, 124);
+  
 }
 
 .modal-row {
@@ -86,13 +103,25 @@ a:hover {
   font-weight: 500;
 }
 
+
+#modal-pages,
+#modal-groups {
+  list-style: none;
+
+}
+
+
 .value {
   color: rgb(13, 65, 150);
 }
 
-.hidden {
-  display: none;
+.value li {
+  width:100%;
 }
+
+/*.hidden {
+  display: none; 
+}*/
 
 main {
   display: flex;
@@ -163,3 +192,5 @@ button:hover {
   box-shadow: 0 0 10px rgb(32, 111, 239);
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
+
+
