@@ -62,12 +62,12 @@ position: relative;
 .dialog {
   position: absolute;
   margin-top: 30px;
+  right: 50px;
 }
 
 #profile-modal {
-  max-width: 350px;
+  max-width: 320px;
   width:100%;
-
   background: rgb(235, 239, 246);
   border: 3px solid rgb(231, 234, 240);
   padding: 15px;

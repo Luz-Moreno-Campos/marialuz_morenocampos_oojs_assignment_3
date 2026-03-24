@@ -1,100 +1,93 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Luz Moreno Campos">
-  <meta name="description" content="Fakebook">
-  <meta name="keywords" content="shapes, creation, circles, squares, grid">
-  <link rel="icon" href="./assets/media/favicon.jpg" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/styles/reset.css" media="all">
-  <link rel="stylesheet" href="./assets/styles/index.css" media="all">
-  <script src="./script/script.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  <title>Fakebook</title>
-</head>
-
-<body>
-  <div class="container">
-    <header>
-      <img class="logo" src="./assets/media/fakebook-logo.jpg">
-      <div>
-        <nav class="menu">
-          <a href="#">Friends</a>
-          <a href="#">Pages</a>
-          <a href="#">Groups</a>
-          <a href="#">My adds</a>
-          <a href="#">Settings</a>
-        </nav>
-      </div>
-      <div class="profile-info">
-        <img class="profile-photo" id="header-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
-        <div class="dialog">
-          <div id="profile-modal" class="profile-modal hidden">
-            <img class="profile-photo" id="modal-photo" src="./assets/media/profile-photo.jpg">
-            <div class="section-divider">
-              <p>Personal Info</p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Luz Moreno Campos">
+    <meta name="description" content="Fakebook">
+    <meta name="keywords" content="posts, photos, social media, friends">
+    <link rel="icon" href="./assets/media/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/styles/reset.css" media="all">
+    <link rel="stylesheet" href="./assets/styles/index.css" media="all">
+    <script src="./script/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Fakebook</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img class="logo" src="./assets/media/fakebook-logo.jpg">
+        <div>
+          <nav class="menu">
+            <a href="#">Friends</a>
+            <a href="#">Pages</a>
+            <a href="#">Groups</a>
+            <a href="#">My adds</a>
+            <a href="#">Settings</a>
+          </nav>
+        </div>
+        <div class="profile-info">
+          <img class="profile-photo" id="header-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
+          <div class="dialog">
+            <div id="profile-modal" class="profile-modal hidden">
+              <img class="profile-photo" id="modal-photo" src="./assets/media/profile-photo.jpg">
+              <div class="section-divider">
+                <p>Personal Info</p>
+              </div>
+              <div class="modal-row">
+                <span class="label">Name:</span>
+                <span class="value" id="modal-name"></span>
+              </div>
+              <div class="modal-row">
+                <span class="label">Username:</span>
+                <span class="value" id="modal-username"></span>
+              </div>
+              <div class="modal-row">
+                <span class="label">Email: </span>
+                <span class="value" id="modal-email"></span>
+              </div>
+              <div class="modal-row">
+                <span class="label">User ID:</span>
+                <span class="value" id="modal-id"></span>
+              </div>
+              <div class="section-divider">
+                <p>Account Features</p>
+              </div>
+              <div class="modal-row">
+                <span class="label">Can Monetize:</span>
+                <span class="value" id="modal-monetize"></span>
+              </div>
+              <div class="section-divider">
+                <p>My Pages</p>
+              </div>
+              <ul class="value" id="modal-pages"></ul>
+              <div class="section-divider">My Groups</div>
+              <ul class="value" id="modal-groups"></ul>
             </div>
-            <div class="modal-row">
-              <span class="label">Name:</span>
-              <span class="value" id="modal-name"></span>
-            </div>
-            <div class="modal-row">
-              <span class="label">Username:</span>
-              <span class="value" id="modal-username"></span>
-            </div>
-            <div class="modal-row">
-              <span class="label">Email: </span>
-              <span class="value" id="modal-email"></span>
-            </div>
-            <div class="modal-row">
-              <span class="label">User ID:</span>
-              <span class="value" id="modal-id"></span>
-            </div>
-            <div class="section-divider">
-              <p>Account Features</p>
-            </div>
-            <div class="modal-row">
-              <span class="label">Can Monetize:</span>
-              <span class="value" id="modal-monetize"></span>
-            </div>
-            <div class="section-divider">
-              <p>My Pages</p>
-            </div>
-            <ul class="value" id="modal-pages">
-              <li>Nature Lovers</li>
-              <li>Winnipeg Art Community</li>
-            </ul>
-            <div class="section-divider">My Groups</div>
-            <ul class="value" id="modal-groups"></ul>
           </div>
         </div>
-      </div>
-
-    </header>
-    <main>
-      <div class="post-generator">
-        <form>
-          <div class="post-header">
-            <img class="profile-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
-            <span class="username"></span>
-          </div>
-          <textarea id="post-content" name="post" placeholder="What are you thinking?"></textarea>
-          <div class="post-actions">
-            <label for="upload-photo" class="upload-icon">
-              <i class="fa-solid fa-image"></i>
-            </label>
-            <input type="file" id="upload" accept="image/*">
-            <button type="submit">Post</button>
-          </div>
-        </form>
-      </div>
-  </div>
-</body>
-
+      </header>
+      <main>
+        <div class="post-generator">
+          <form>
+            <div class="post-header">
+              <img class="profile-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
+              <span class="username"></span>
+            </div>
+            <textarea id="post-content" name="post" placeholder="What are you thinking?"></textarea>
+            <div class="post-actions">
+              <label for="upload-photo" class="upload-icon">
+                <i class="fa-solid fa-image"></i>
+              </label>
+              <input type="file" id="upload" accept="image/*">
+              <button type="submit">Post</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </body>
 </html>
