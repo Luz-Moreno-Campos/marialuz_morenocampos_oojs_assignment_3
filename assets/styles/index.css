@@ -15,6 +15,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .logo {
   height: 50%;;
   margin-top: 20px; 
@@ -127,14 +133,17 @@ main {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  gap: 50px;
 }
 
-.post-generator{
+.post-generator,
+.post-container{
   width:40%;
   background-color: #bfc8d9;
   padding: 20px;
   border-radius: 10px;
 }
+
 
 .post-header {
   display: flex;
@@ -193,4 +202,25 @@ button:hover {
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 
+.post-header-date {
+  display: flex;
+  margin-bottom: 20px;
+}
 
+.post-info {
+ padding-top: 25px;
+ margin-left: 10px;
+ 
+}
+
+.date {
+  margin-left: 250px;
+}
+
+.post-text {
+  margin-bottom: 15px;
+}
+
+ .post-container {
+  margin-bottom: 20px;
+ }
