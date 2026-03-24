@@ -21,7 +21,7 @@ main {
   align-items: center;  
   justify-content: center;
   margin-top: 40px;
-  gap: 50px;
+  gap: 40px;
 }
 
 .logo {
@@ -133,12 +133,11 @@ a:hover {
   width: 100%;
 }
 
-/*.hidden {
+.hidden {
   display: none; 
-}*/
+}
 
-.post-generator,
-.post-container {
+.post-generator {
   width: 40%;
   background-color: #bfc8d9;
   padding: 20px;
@@ -202,6 +201,12 @@ button:hover {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
+.post-container {
+  background-color: #bfc8d9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .post-info {
   padding-top: 25px;
 }
@@ -214,6 +219,12 @@ button:hover {
   margin-bottom: 15px;
 }
 
-.post-container {
+.post-feed {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+  margin-top: 20px;
   margin-bottom: 20px;
 }
+

@@ -1,8 +1,10 @@
 'use strict';
 
-import { getElement, select,  listen } from './utils.js';
+import { getElement, select, listen } from './utils.js';
 
-const userName= select('.username');
+const headerPhoto = getElement('header-photo');
+const profileModal = getElement('profile-modal');
+const userName = select('.username');
 const name = getElement('modal-name');
 const email = getElement('modal-email');
 const id = getElement('modal-id');
@@ -13,12 +15,15 @@ const content = getElement('post-content');
 const uploadfile = getElement('upload');
 const date = select('.date');
 const postText = select('.posted-text');
-const postedImage = select('.post-image')
+const postedImage = select('.post-image');
+const postContainer = select('.post-feed')
+const postBtn = getElement('post-btn');
+
 
 class User {
-  #id; 
-  #name; 
-  #userName; 
+  #id;
+  #name;
+  #userName;
   #email;
   constructor(id, name, userName, email) {
     this.#id = id;
@@ -27,10 +32,10 @@ class User {
     this.#email = email;
   }
 
-  get id() {return this.#id}
-  get name() {return this.#name}
-  get userName() {return this.#userName}
-  get email() {return this.#email}
+  get id() { return this.#id }
+  get name() { return this.#name }
+  get userName() { return this.#userName }
+  get email() { return this.#email }
 
   getInfo() {
     userName.innerText = this.#userName;
@@ -52,16 +57,37 @@ class Subscriber extends User {
     this.#groups = groups;
     this.#canMonetize = canMonetize;
   }
-get pages() {return this.#pages}
-get groups() {return this.#groups}
-get canMonetize() {return this.#canMonetize}
+  get pages() { return this.#pages }
+  get groups() { return this.#groups }
+  get canMonetize() { return this.#canMonetize }
 
- getInfo() {
+  getInfo() {
     super.getInfo();
     pages.innerText = this.#pages;
     groups.innerText = this.#groups;
     canMonetize.innerText = this.#canMonetize ? "Yes" : "No";
-   
-  }
 
+  }
 }
+
+const subscriber = new Subscriber(
+  123,
+  "Wally Travels",
+  "wallytravels",
+  "luzdirection@gmail.com",
+  ["Travel Blog", "Foodies"],
+  ["Backpackers", "Digital Nomads"],
+  true
+);
+
+
+
+
+listen('click', headerPhoto, () => {
+  subscriber.getInfo();
+  profileModal.classList.toggle('hidden');
+});
+
+
+
+
