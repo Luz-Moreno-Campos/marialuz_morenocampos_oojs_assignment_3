@@ -1,10 +1,10 @@
 'use strict';
 
-import { getElement, select, listen } from './utils.js';
+import { getElement, select, selectAll, listen } from './utils.js';
 
 const headerPhoto = getElement('header-photo');
 const profileModal = getElement('profile-modal');
-const userName = select('.username');
+const userName = selectAll('.username');
 const name = getElement('modal-name');
 const email = getElement('modal-email');
 const id = getElement('modal-id');
@@ -38,7 +38,7 @@ class User {
   get email() { return this.#email }
 
   getInfo() {
-    userName.innerText = this.#userName;
+    userName.forEach(el => el.innerText = this.userName);
     name.innerText = this.#name;
     id.innerText = this.#id;
     email.innerText = this.#email;
@@ -62,9 +62,12 @@ class Subscriber extends User {
   get canMonetize() { return this.#canMonetize }
 
   getInfo() {
+
     super.getInfo();
-    pages.innerText = this.#pages;
-    groups.innerText = this.#groups;
+    
+    pages.innerHTML = this.#pages.map(page => `<li>${page}</li>`).join("");
+    groups.innerHTML = this.#groups.map(page => `<li>${page}</li>`).join("");
+
     canMonetize.innerText = this.#canMonetize ? "Yes" : "No";
 
   }
@@ -72,22 +75,18 @@ class Subscriber extends User {
 
 const subscriber = new Subscriber(
   123,
-  "Wally Travels",
+  "Wallace Friedling",
   "wallytravels",
-  "luzdirection@gmail.com",
+  "wallytravels@gmail.com",
   ["Travel Blog", "Foodies"],
   ["Backpackers", "Digital Nomads"],
   true
 );
 
 
-
-
 listen('click', headerPhoto, () => {
   subscriber.getInfo();
   profileModal.classList.toggle('hidden');
 });
-
-
 
 
