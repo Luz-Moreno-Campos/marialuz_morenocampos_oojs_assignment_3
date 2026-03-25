@@ -16,7 +16,7 @@ const uploadfile = getElement('upload');
 const date = select('.date');
 const postText = select('.posted-text');
 const postedImage = select('.post-image');
-const postContainer = select('.post-feed')
+const feed = select('.posts-feed')
 const postBtn = getElement('post-btn');
 
 
@@ -64,7 +64,7 @@ class Subscriber extends User {
   getInfo() {
 
     super.getInfo();
-    
+
     pages.innerHTML = this.#pages.map(page => `<li>${page}</li>`).join("");
     groups.innerHTML = this.#groups.map(page => `<li>${page}</li>`).join("");
 
@@ -89,4 +89,50 @@ listen('click', headerPhoto, () => {
   profileModal.classList.toggle('hidden');
 });
 
+
+function createPost() {
+  const text = content.value.trim();
+  const file = uploadfile.files[0];
+
+  if (!text && !file) return;
+
+  let imageHTML = "";
+  if (file) {
+    // This creates a temporary URL (a blob URL) that represents the file the user uploaded.
+    // The browser can use this URL as the source of the <img> to display it without needing to upload it to a server.
+    const imageURL = URL.createObjectURL(file);
+    imageHTML = `<img class="post-image" src="${imageURL}" alt="">`;
+  }
+
+  let textHTML = "";
+  if (text) {
+    textHTML = `<p class="posted-text">${text}</p>`;
+  }
+
+  const newPost = `
+    <div class="post-container">
+      <div class="post-header">
+        <img class="profile-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
+        <div class="post-info">
+          <span class="username">${subscriber.name}</span>
+          <span class="date">${new Date().toLocaleDateString()}</span>
+        </div>
+      </div>
+      <div class="post">
+        ${textHTML} 
+        ${imageHTML}
+      </div>
+    </div>`
+
+
+  feed.innerHTML = newPost + feed.innerHTML;
+
+  content.value = "";
+  uploadfile.value = "";
+}
+
+
+listen('click', postBtn, () => {
+  createPost();
+});
 

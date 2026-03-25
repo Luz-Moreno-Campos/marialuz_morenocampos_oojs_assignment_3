@@ -219,7 +219,7 @@ button:hover {
   margin-bottom: 15px;
 }
 
-.post-feed {
+.posts-feed {
   width: 40%;
   display: flex;
   flex-direction: column;
