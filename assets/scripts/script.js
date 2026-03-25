@@ -18,6 +18,7 @@ const postText = select('.posted-text');
 const postedImage = select('.post-image');
 const feed = select('.posts-feed')
 const postBtn = getElement('post-btn');
+const displayFile = getElement("file-name-display");
 
 
 class User {
@@ -132,7 +133,18 @@ function createPost() {
 }
 
 
-listen('click', postBtn, () => {
+listen("change", uploadfile, () => {
+  const file = uploadfile.files[0];
+
+  if (file) {
+    displayFile.innerText = file.name;
+  } else {
+    displayFile.innerText = "";
+  }
+});
+
+
+listen("click", postBtn, () => {
   createPost();
 });
 
