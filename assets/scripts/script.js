@@ -13,9 +13,6 @@ const pages = getElement('modal-pages');
 const groups = getElement('modal-groups');
 const content = getElement('post-content');
 const uploadfile = getElement('upload');
-const date = select('.date');
-const postText = select('.posted-text');
-const postedImage = select('.post-image');
 const feed = select('.posts-feed')
 const postBtn = getElement('post-btn');
 const displayFile = getElement("file-name-display");
@@ -85,11 +82,6 @@ const subscriber = new Subscriber(
 );
 
 
-listen('click', headerPhoto, () => {
-  subscriber.getInfo();
-  profileModal.classList.toggle('hidden');
-});
-
 function getDate() {
   const options = {
     year: 'numeric',
@@ -98,6 +90,7 @@ function getDate() {
   }
   return new Date().toLocaleString('en-ca', options);
 }
+
 
 function createPost() {
   const text = content.value.trim();
@@ -117,7 +110,7 @@ function createPost() {
   if (text) {
     textHTML = `<p class="posted-text">${text}</p>`;
   }
-  
+
   const newPost = `
     <div class="post-container">
       <div class="post-header">
@@ -133,13 +126,19 @@ function createPost() {
       </div>
     </div>`
 
-
   feed.innerHTML = newPost + feed.innerHTML;
 
   content.value = "";
   uploadfile.value = "";
   displayFile.innerText = "";
 }
+
+
+
+listen('click', headerPhoto, () => {
+  subscriber.getInfo();
+  profileModal.classList.toggle('hidden');
+});
 
 
 listen("change", uploadfile, () => {
