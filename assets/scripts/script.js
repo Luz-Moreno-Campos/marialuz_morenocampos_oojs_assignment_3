@@ -1,10 +1,10 @@
 'use strict';
 
-import { getElement, select, selectAll, listen } from './utils.js';
+import { getElement, select, listen } from './utils.js';
 
 const headerPhoto = getElement('header-photo');
 const profileModal = getElement('profile-modal');
-const userName = selectAll('.username');
+const modalUsername = select('.username');
 const name = getElement('modal-name');
 const email = getElement('modal-email');
 const id = getElement('modal-id');
@@ -21,22 +21,22 @@ const displayFile = getElement("file-name-display");
 class User {
   #id;
   #name;
-  #userName;
+  #username;
   #email;
-  constructor(id, name, userName, email) {
+  constructor(id, name, username, email) {
     this.#id = id;
     this.#name = name;
-    this.#userName = userName;
+    this.#username = username;
     this.#email = email;
   }
 
   get id() { return this.#id }
   get name() { return this.#name }
-  get userName() { return this.#userName }
+  get username() { return this.#username }
   get email() { return this.#email }
 
   getInfo() {
-    userName.forEach(el => el.innerText = this.userName);
+    modalUsername.innerText = this.#username;
     name.innerText = this.#name;
     id.innerText = this.#id;
     email.innerText = this.#email;
@@ -49,8 +49,8 @@ class Subscriber extends User {
   #groups;
   #canMonetize;
 
-  constructor(id, name, userName, email, pages, groups, canMonetize) {
-    super(id, name, userName, email)
+  constructor(id, name, username, email, pages, groups, canMonetize) {
+    super(id, name, username, email)
     this.#pages = pages;
     this.#groups = groups;
     this.#canMonetize = canMonetize;
