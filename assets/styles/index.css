@@ -21,7 +21,7 @@ main {
   align-items: center;  
   justify-content: center;
   margin-top: 40px;
-  gap: 50px;
+  gap: 40px;
 }
 
 .logo {
@@ -115,7 +115,7 @@ a:hover {
 .modal-row {
   display: flex;
   gap: 5px;
-  font-weight: 650; 
+ 
 }
 
 
@@ -124,21 +124,20 @@ a:hover {
   list-style: none;
 }
 
-
 .value {
   color: rgb(11, 54, 124);
+  font-weight: 650; 
 }
 
 .value li {
   width: 100%;
 }
 
-/*.hidden {
+.hidden {
   display: none; 
-}*/
+}
 
-.post-generator,
-.post-container {
+.post-generator {
   width: 40%;
   background-color: #bfc8d9;
   padding: 20px;
@@ -165,14 +164,27 @@ textarea {
 }
 
 .post-actions {
+  
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 10px;
-  gap: 450px;
+
 }
 
 #upload {
   display: none;
+}
+
+.upload-container {
+  display: flex;
+
+}
+
+#file-name-display {
+ font-size: 1.3rem;
+ font-weight: 500;
+ margin-top: 10px;
+ margin-left: 5px;
 }
 
 i {
@@ -202,6 +214,12 @@ button:hover {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
+.post-container {
+  background-color: #bfc8d9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .post-info {
   padding-top: 25px;
 }
@@ -210,10 +228,16 @@ button:hover {
   margin-left: 280px;
 }
 
-.post-text {
+.posted-text {
   margin-bottom: 15px;
 }
 
-.post-container {
+.posts-feed {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+  margin-top: 20px;
   margin-bottom: 20px;
 }
+
