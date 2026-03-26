@@ -16,6 +16,7 @@ const uploadfile = getElement('upload');
 const feed = select('.posts-feed')
 const postBtn = getElement('post-btn');
 const displayFile = getElement("file-name-display");
+const dialog = select('.dialog');
 
 
 class User {
@@ -137,6 +138,10 @@ function createPost() {
 
 listen('click', headerPhoto, () => {
   subscriber.getInfo();
+  profileModal.classList.toggle('hidden');
+});
+
+listen('mouseleave', dialog, () => {
   profileModal.classList.toggle('hidden');
 });
 
