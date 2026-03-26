@@ -164,14 +164,27 @@ textarea {
 }
 
 .post-actions {
+  
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 10px;
-  gap: 450px;
+
 }
 
 #upload {
   display: none;
+}
+
+.upload-container {
+  display: flex;
+
+}
+
+#file-name-display {
+ font-size: 1.3rem;
+ font-weight: 500;
+ margin-top: 10px;
+ margin-left: 5px;
 }
 
 i {

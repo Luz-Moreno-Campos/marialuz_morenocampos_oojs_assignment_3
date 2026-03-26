@@ -130,6 +130,7 @@ function createPost() {
 
   content.value = "";
   uploadfile.value = "";
+  displayFile.innerText = "";
 }
 
 
