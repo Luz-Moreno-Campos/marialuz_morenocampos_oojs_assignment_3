@@ -41,7 +41,7 @@ This project was created as an assignment focused on classes, DOM manipulation, 
 - **JavaScript** — behaviour, DOM manipulation, modules  
 
 ##  Demo
-You can view the live demo here:
+You can view the live demo here: https://luz-moreno-campos.github.io/marialuz_morenocampos_oojs_assignment_3/
 
 
 
