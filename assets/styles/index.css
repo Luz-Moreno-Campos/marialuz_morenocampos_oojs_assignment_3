@@ -51,9 +51,7 @@ a {
 
 a:hover {
   transform: translateY(-2px);
- 
   color: rgb(26, 95, 208);
-
 }
 
 .profile-photo {
@@ -72,8 +70,7 @@ a:hover {
 .dialog {
   position: absolute;
   margin-top: 30px;
-  right: 50px;
-  
+  right: 50px; 
 }
 
 #profile-modal {
@@ -83,10 +80,8 @@ a:hover {
   border: 3px solid rgb(231, 234, 240);
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
 }
-
 
 .section-divider {
   display: flex;
@@ -106,13 +101,19 @@ a:hover {
 }
 
 #modal-name {
-  color: black; 
+ font-weight: 650;
 }
 
 #user-modal {
   margin-left: 20px;
   font-weight: 500;
 }
+
+#modal-name,
+#user-modal {
+  text-shadow: 1px 1px 1px rgba(130, 124, 124, 0.5);
+}
+
 
 .identity {
   display: flex;
@@ -148,10 +149,6 @@ a:hover {
   font-weight: 650; 
 }
 
-.value li {
-  width: 100%;
-}
-
 .hidden {
   display: none; 
 }
@@ -185,11 +182,9 @@ textarea {
 }
 
 .post-actions {
-  
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
-
 }
 
 #upload {
@@ -198,7 +193,6 @@ textarea {
 
 .upload-container {
   display: flex;
-
 }
 
 #file-name-display {
@@ -215,7 +209,6 @@ i {
 }
 
 i:hover {
-
   color: rgb(22, 71, 150);
 
 }
@@ -252,6 +245,14 @@ button:hover {
 .posted-text {
   margin-bottom: 15px;
 }
+
+.post-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 
 .posts-feed {
   width: 40%;
