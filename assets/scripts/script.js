@@ -90,6 +90,14 @@ listen('click', headerPhoto, () => {
   profileModal.classList.toggle('hidden');
 });
 
+function getDate() {
+  const options = {
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit'
+  }
+  return new Date().toLocaleString('en-ca', options);
+}
 
 function createPost() {
   const text = content.value.trim();
@@ -109,14 +117,14 @@ function createPost() {
   if (text) {
     textHTML = `<p class="posted-text">${text}</p>`;
   }
-
+  
   const newPost = `
     <div class="post-container">
       <div class="post-header">
         <img class="profile-photo" src="./assets/media/profile-photo.jpg" alt="Profile photo">
         <div class="post-info">
           <span class="username">${subscriber.name}</span>
-          <span class="date">${new Date().toLocaleDateString()}</span>
+          <span class="date">${getDate()}</span>
         </div>
       </div>
       <div class="post">
