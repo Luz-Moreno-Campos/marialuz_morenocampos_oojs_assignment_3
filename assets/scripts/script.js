@@ -127,8 +127,8 @@ function createPost() {
       </div>
     </div>`
 
-  feed.innerHTML = newPost + feed.innerHTML;
-
+  // "afterbegin" adds the new post at the begininning of the feed container.
+  feed.insertAdjacentHTML("afterbegin", newPost);
   content.value = "";
   uploadfile.value = "";
   displayFile.innerText = "";
@@ -145,7 +145,6 @@ listen('mouseleave', dialog, () => {
   profileModal.classList.toggle('hidden');
 });
 
-
 listen("change", uploadfile, () => {
   const file = uploadfile.files[0];
 
@@ -155,7 +154,6 @@ listen("change", uploadfile, () => {
     displayFile.innerText = "";
   }
 });
-
 
 listen("click", postBtn, () => {
   createPost();
